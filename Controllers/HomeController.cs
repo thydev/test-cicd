@@ -22,16 +22,13 @@ namespace showbeach.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        [HttpPost]
+        [Route("ShowPicture")]
+        public IActionResult ShowPicture()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Show beach picture.";
 
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            return View("ShowPicture");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
